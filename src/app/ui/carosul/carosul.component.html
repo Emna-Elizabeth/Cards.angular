@@ -1,0 +1,48 @@
+
+         
+        @for (item of products; track item.id) {
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+          <div class="d-flex"> 
+            <app-card [title]="item.title" [description]="item.description" [src]="item.images[0]"></app-card>
+          </div>  
+        </div>
+      </div>
+      </div> 
+          }
+        
+
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+
+
+
+
+  <!-- <div [id]="id" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div *ngFor="let group of groupedProducts; let i = index" class="carousel-item" [class.active]="i === 0">
+        <div class="row">
+          <div *ngFor="let product of group" class="col-md-3">
+            <app-card [title]="product.title" [description]="product.description" [src]="product.images[0]"></app-card>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#' + id" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#' + id" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+   -->

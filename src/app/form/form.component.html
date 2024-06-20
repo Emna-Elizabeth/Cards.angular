@@ -1,0 +1,7 @@
+
+<div class="container">
+    <input [(ngModel)]="email" type="text" placeholder="email" (keyup)="okFunc($event)" >
+    <p>{{email}}</p>
+    <img [src]="imageDetails.src" [alt]="imageDetails.alt">
+    <button class="btn btn-primary" [class.btn-clr]="!isOk" [disabled]="isOk">Submit</button>
+</div>
